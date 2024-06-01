@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+:root {
+  accent-color: theme('colors.amber.300');
+}
+
+:focus-visible {
+  outline: 3px solid transparent;
+  outline-color: theme('colors.amber.300');
+}
+
+::selection {
+  background-color: theme('colors.amber.300');
+}
+
+::marker {
+  color: theme('colors.amber.300');
+}
+
+:is( ::-webkit-calendar-picker-indicator,
+  ::-webkit-clear-button,
+  ::-webkit-inner-spin-button,
+  ::-webkit-outer-spin-button) {
+  color: theme('colors.amber.300');
+}
+
+@layer base{
+  body {
+    @apply bg-amber-50;
+  }
+}
+
+@layer components {
+  .middle-block {
+    @apply flex items-center justify-center min-h-screen flex-col;
+  }
+  .input, .button {
+    @apply rounded-md px-4 py-2;
+  }
+
+  .input {
+    @apply shadow-inner shadow-slate-300;
+  }
+
+  .button {
+    @apply bg-amber-300 uppercase text-center shadow-md;
+  }
+
+  .button:hover {
+    background-image: radial-gradient(theme('colors.amber.100'), theme('colors.amber.300'));
+  }
+
+  .form {
+    @apply mx-auto p-8 shadow-md w-max max-w-full;
+  }
+
+  [class^="form-block"]{
+    @apply my-8 space-x-4 items-center;
+  }
+  .form-block-2 {
+    display: grid;
+    grid-template-columns: 1fr auto;
+  }
+  .form-block {
+    @apply text-center;
+  }
+}
+

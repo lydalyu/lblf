@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link rel="icon" href="{% static 'network/comments-regular.svg' %}" type="image/svg+xml"> -->
+        <title>{% block title %}Hello{% endblock %}</title>
+        <script src="https://kit.fontawesome.com/79bebaf86e.js" crossorigin="anonymous"></script>
+        <!-- <link href="{% static 'network/styles.css' %}" rel="stylesheet">
+        <script src="{% static 'network/scripts.js' %}"></script> -->
+    </head>
+    <body>
+        <div class="container">
+            {% block menu %}
+            {% endblock menu %}
+            {% block content %}
+            {% endblock content %}
+        </div>
+    </body>
+</html>
