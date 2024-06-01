@@ -1,0 +1,10 @@
+db.sqlite3
+lblf/__init__.py
+lblf/__pycache__/
+lblf/myapp/package-lock.json
+lblf/myapp/public/
+lblf/static/
+manage.py
+myapi/__init__.py
+myapi/__pycache__/
+staticfiles/
