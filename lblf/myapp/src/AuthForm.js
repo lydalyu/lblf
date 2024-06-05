@@ -26,13 +26,15 @@ function AuthForm() {
         })
             .then(response => response.json())
             .then(result => {
-                console.log(result);
+                // console.log(result);
+                setMessage(result.message);
             });
     }
 
     return (
         <form className='form' onSubmit={(event) => { sendForm(form_action, event)}} method="POST">
             <h4 className='text-lg w-100 text-center font-bold mb-8'>Please, {form_action} here!</h4>
+            <div className='text-xenter' >{ message }</div>
             <div className='form-block-2'>
                 <label for="email">Email: </label>
                 <input className='input' id="email" type="email" name="email" />
